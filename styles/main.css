@@ -1,98 +1,99 @@
+/* global styles */
+
 *, *::before, *::after {
-     -moz-box-sizing: border-box;
-     -webkit-box-sizing: border-box;
-     box-sizing: border-box;
- }
+  /* vendor prefixes are required for any CSS property that hasn't been officially adopted into the CSS3 specification */
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 html {
-     height: 100%; /* makes sure our HTML takes up 100% of the browser window */
-     font-size: 100%;
- }
- 
- body {
-     font-family: 'Open Sans'; /* sets our font to the "Open Sans" typeface */
-     color: white;             /* sets the text color to white */
-     min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the window */
- }
- 
- .navbar {
-     position: relative;
-     padding: 0.5rem;
-     /* #1 */
-     background-color: rgba(101,18,95,0.5);
-     /* #2 */
-     z-index: 1;
- }
- 
- .navbar .logo {
-     position: relative; /* positioning will be explained in a resource */
-     left: 2rem;
-	 cursor: pointer;  /* produces the finger-pointer icon when you hover over the logo */
- }
- 
- .navbar .links-container {
-     display: table;
-     position: absolute;
-     top: 0;
-     right: 0;
-     height: 100px;
-     color: white;
-     /* #3 */
-     text-decoration: none;
- }
- 
- .links-container .navbar-link {
-     display: table-cell;
-     position: relative;
-     height: 100%;
-     padding-left: 1rem;
-     padding-right: 1rem;
-     /* #4 */
-     vertical-align: middle;
-     color: white;
-     font-size: 0.625rem;
-     letter-spacing: 0.05rem;
-     font-weight: 700;
-     text-transform: uppercase;
-     /* #3 */
-     text-decoration: none;
-     cursor: pointer;
- }
- 
-   /* #5 */
- .links-container .navbar-link:hover {
-     color: rgb(233,50,117);
- }
+  height: 100%; /* makes sure the HTML takes up 100% of the browser window */
+  font-size: 100%;
+}
 
- }
+body {
+  font-family: 'Open Sans'; /* sets the font to the "Open Sans" typeface */
+  color: white;             /* sets the text color to white */
+  min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the window */
+}
+
+.navbar {
+  position: relative;
+  padding: 0.5rem;
+  /* the rgba() value is the same as the rgb() value for color, except that it takes a fourth argument that determines alpha (opacity) of the color */
+  background-color: rgba(101,18,95,0.5);
+  /* determines which of them is displayed on top of the other */
+  z-index: 1;
+}
+
+.navbar .logo {
+  position: relative;
+  left: 2rem;
+	cursor: pointer; /* produces the finger-pointer icon when you hover over the logo */
+}
+
+.navbar .links-container {
+  display: table;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100px;
+  color: white;
+  /* the text-decoration property changes the "decorative" properties of text, allowing for the addition of underlines, strikethroughs, and more */
+  text-decoration: none;
+}
+
+.links-container .navbar-link {
+  display: table-cell;
+  position: relative;
+  height: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* vertical-align orients inline or table-cell content vertically and the  middle value centers the nav links vertically within their containers */
+  vertical-align: middle;
+  color: white;
+  font-size: 0.625rem;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* pseudo-class selector :hover, occurs when a cursor mouses over it */
+.links-container .navbar-link:hover {
+  color: rgb(233,50,117);
+}
 
 .container {
-     margin: 0 auto;
-     max-width: 64rem;
- }
+  /* when a width is "fixed" (meaning there is a width or max-width defined), setting the left and right margins to auto will center the element */
+  margin: 0 auto;
+  max-width: 64rem;
+}
 
- .container.narrow {
-     max-width: 56rem;
- }
+.container.narrow {
+  max-width: 56rem;
+}
 
 /* Medium and small screens (640px) */
 @media (min-width: 640px) {
 	html { font-size: 112%; }
-	
-	.column {
-         float: left;
-         padding-left: 1rem;
-         padding-right: 1rem;
-    }
-	
-	.column.full { width: 100%; }
-    .column.two-thirds { width: 66.7%; }
-    .column.half { width: 50%; }
-    .column.third { width: 33.3%; }
-    .column.fourth { width: 25%; }
-    .column.flow-opposite { float: right; }  
+
+  .column {
+    float: left;  /* ensures that the element will stick to the left-most side in its container */
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .column.full { width: 100%; }
+  .column.two-thirds { width: 66.7%; }
+  .column.half { width: 50%; }
+  .column.third { width: 33.3%; }
+  .column.fourth { width: 25%; }
+  .column.flow-opposite { float: right; }
 }
- 
+
  /* Large screens (1024px) */
 @media (min-width: 1024px) {
 	html { font-size: 120%; }
@@ -100,10 +101,10 @@ html {
 
 .clearfix::before,
 .clearfix::after {
-   content: " ";
-   display: table;
+  content: " ";
+  display: table;
 }
 
 .clearfix::after {
-   clear: both;
+  clear: both;
 }

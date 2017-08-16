@@ -1,40 +1,40 @@
 body.collection {
-     background-image: url(../assets/images/blurred_backgrounds/blur_bg_2.jpg);
-     background-repeat: no-repeat;
-     background-attachment: fixed;
-     background-position: center center;
-     background-size: cover;
- }
- 
- .album-covers {
-     position: relative;
- }
- 
- .collection-album-container {
-     position: relative;
-     margin-top: 30px;
-     margin-bottom: 20px;
-     text-align: center;
- }
- 
- .collection-album-container .caption {
-     margin-top: 10px;
- }
- 
- .collection-album-container .caption p {
-     font-size: 1rem;
-     font-weight: 300;
-     color: rgba(255, 255, 255, 0.6);
- }
- 
- .collection-album-container .caption p a {
-     color: rgba(255, 255, 255, 0.6);
- }
- 
- .collection-album-container .caption p a.album-name {
-     color: white;
- }
- 
- .collection-album-container img {
-     width: 80%;
- }
+  background-image: url(../assets/images/blurred_backgrounds/blur_bg_2.jpg);
+  background-repeat: no-repeat; /* if the dimensions of the collection page are greater than the size of the background image, the image will not repeat */
+  background-attachment: fixed; /* fixes the background so that when the page scrolls, the background image does not move up or down with the content */
+  background-position: center center;
+  background-size: cover; /* scales the image to cover the dimensions of the browser */
+}
+
+.album-covers {
+  position: relative;
+}
+
+.collection-album-container {
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.collection-album-container .caption {
+  margin-top: 10px;
+}
+
+.collection-album-container .caption p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.collection-album-container .caption p a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.collection-album-container .caption p a.album-name {
+  color: white;
+}
+
+.collection-album-container img {
+  width: 80%;
+}

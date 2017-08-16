@@ -1,5 +1,5 @@
 var buildCollectionItemTemplate = function() {
-    var template =
+  var template =
     '<div class="collection-album-container column fourth">'
   + '  <img src="assets/images/album_covers/01.png"/>'
   + '  <div class="collection-album-info caption">'
@@ -14,15 +14,18 @@ var buildCollectionItemTemplate = function() {
   + '  </div>'
   + '</div>'
   ;
-    
-    return $(template);
+
+  // this function returns the markup string as a jQuery object, which we'll call a jQuery template
+  return $(template);
 };
 
 $(window).load(function() {
-    var $collectionContainer = $('.album-covers');
-    $collectionContainer.empty();
-    for (var i = 0; i < 12; i++) {
-        var $newThumbnail = buildCollectionItemTemplate();
-        $collectionContainer.append($newThumbnail);
-    }
+  var $collectionContainer = $('.album-covers');
+  // empty() method empties, or removes, any text or other elements from the element(s) it is called on
+  $collectionContainer.empty();
+  for (var i = 0; i < 12; i++) {
+    var $newThumbnail = buildCollectionItemTemplate();
+    // with each loop, append the template content to the collection container
+    $collectionContainer.append($newThumbnail);
+  }
 });

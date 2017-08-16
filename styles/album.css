@@ -1,105 +1,107 @@
 body.album {
-    background-image: url(../assets/images/blurred_backgrounds/blur_bg_3.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    background-size: cover;
-	padding-bottom: 200px;
+  background-image: url(../assets/images/blurred_backgrounds/blur_bg_3.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+	padding-bottom: 200px; /* allows the user to scroll to the end of the album page and still view all the content, even with the player bar fixed at the bottom */
 }
 
 .album-cover-art {
-    position: relative;
-    left: 20%;
-    margin-top: 1rem;
-    width: 60%;
+  position: relative;
+  left: 20%;
+  margin-top: 1rem;
+  width: 60%;
 }
 
 .album-view-details {
-    position: relative;
-    top: 1.5rem;
-    padding: 1rem;
+  position: relative;
+  top: 1.5rem;
+  padding: 1rem;
 }
 
 .album-view-details .album-view-title {
-    font-weight: 300;
-    font-size: 2rem;
+  font-weight: 300;
+  font-size: 2rem;
 }
 
 .album-view-details .album-view-artist {
-    font-weight: 300;
-    font-size: 1.5rem;
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 
 .album-view-details .album-view-release-info {
-    font-weight: 300;
-    font-size: 0.75rem;
+  font-weight: 300;
+  font-size: 0.75rem;
 }
 
 .album-view-song-list {
-    width: 90%;
-    margin: 1.5rem auto;
-    font-weight: 300;
-    font-size: 0.75em;
+  width: 90%;
+  margin: 1.5rem auto;
+  font-weight: 300;
+  font-size: 0.75em;
 }
 
 .album-view-song-item {
-    height: 3rem;
-    border-bottom: 1px solid rgba(255,255,255,0.5);
+  height: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.5); /* use border-bottom instead of border to specify one that only exists on the bottom of the element */
 }
 
 .song-item-number {
-    width: 5%;
-    min-width: 30px;
+  width: 5%;
+  min-width: 30px;  /* use a minimum width to make sure there is always room for the button */
 }
 
 .song-item-title {
-    width: 85%;
+  width: 85%;
 }
 
 .song-item-duration {
-    width: 5%;
+  width: 5%;
 }
 
 .album-song-button {
-    text-align: center;
-    font-size: 14px;
-    background-color: white;
-    color: rgb(210, 40, 123);
-    border-radius: 50% 50%;
-    display: inline-block;
-    width: 28px;
-    height: 28px;
+  text-align: center;
+  font-size: 14px;
+  background-color: white;
+  color: rgb(210, 40, 123);
+  border-radius: 50% 50%;
+  display: inline-block;
+  width: 28px;
+  height: 28px;
 }
 
 .album-song-button:hover {
-    cursor: pointer;
-    color: white;
-    background-color: rgb(210, 40, 123);
+  cursor: pointer;
+  color: white;
+  background-color: rgb(210, 40, 123);
 }
 
 .album-song-button span {
-    line-height: 28px;
+  line-height: 28px;
 }
 
 .album-song-button .fa-play {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
+/* center the album details text to look better on smaller devices */
 @media (max-width: 40rem) and (min-width: 20rem) {
-    .album-view-details {
-        text-align: center;
-    }
-    
-    .album-view-title {
-        margin-top: 0;   
-    }
+  .album-view-details {
+    text-align: center;
+  }
+
+  .album-view-title {
+    margin-top: 0;
+  }
 }
 
+/* adjust the song list to have spacing around it so that it doesn't meet the edge of small devices */
 @media (max-width: 64rem) and (min-width: 20rem) {
-    .album-view-song-list {
-        position: relative;
-        top: 1rem;
-        width: 80%;
-        margin: auto;
-    }
+  .album-view-song-list {
+    position: relative;
+    top: 1rem;
+    width: 80%;
+    margin: auto;
+  }
 }
